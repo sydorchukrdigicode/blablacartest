@@ -1,0 +1,19 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/blabladb
+    username: test
+    password: test
+  flyway:
+    url: jdbc:postgresql://localhost:5432/blabladb
+    user: test
+    password: test
+    enabled: true
+    schemas: public
+    locations: classpath:db/migration
+
+logging:
+  level:
+    com.kyivrush: DEBUG
+    org.springframework.data.r2dbc: DEBUG
+    io.r2dbc.postgresql.QUERY: DEBUG
+    io.r2dbc.postgresql.PARAM: DEBUG

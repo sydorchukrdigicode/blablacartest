@@ -1,0 +1,18 @@
+spring:
+  r2dbc:
+    username:
+    password:
+    url:
+  flyway:
+    url:
+    user:
+    password:
+    enabled: true
+    schemas: public
+    locations: classpath:db/migration
+
+logging:
+  level:
+    org.springframework.data.r2dbc: DEBUG
+    io.r2dbc.postgresql.QUERY: DEBUG
+    io.r2dbc.postgresql.PARAM: DEBUG
